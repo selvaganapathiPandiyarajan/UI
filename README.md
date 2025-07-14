@@ -1,27 +1,44 @@
-# Dit
+#  S'Track Financial Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+An interactive, user-friendly Angular application for managing investments, tracking expenses, and visualizing financial performance. Built for personal or small business use.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+##  Features
 
-## Code scaffolding
+-  Login and Signup with validations
+-  Wallet detail card with CVV, expiry, and balance
+-  Bar & Line Charts (Chart.js)
+-  FullCalendar integration for transaction views
+-  Asset tracking: Stocks, Bonds, Real Estate, Cash
+- Add, View, Filter & Paginate financial entries
+-  Export data to PDF
+-  Secure Password Reset
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+##  Tech Stack
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+| Technology     | Purpose                          |
+|----------------|----------------------------------|
+| Angular        | Frontend framework               |
+| Chart.js       | Bar and Line charts              |
+| FullCalendar   | Expense calendar view            |
+| Bootstrap      | Styling and responsive layout    |
+| json-server    | Mock backend (REST API)          |
+| TypeScript     | Application logic                |
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+src/
+├── app/
+│   ├── nav/              # Navbar component
+│   ├── chart-card/       # Chart rendering with filters
+│   ├── asset-card/       # Reusable cards for assets like Wallet, Expense, etc.
+│   ├── login/            # Login view and logic
+│   ├── signup/           # Signup view and logic
+│   ├── reset/            # Password reset component
+│   ├── customer-dashboard/ # Main dashboard
+│   ├── Controller/api.service.ts    # API interaction service
+│   ├── model/user-details.model.ts # User model
