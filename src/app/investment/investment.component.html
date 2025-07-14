@@ -1,0 +1,152 @@
+<!-- Navigation Component -->
+<app-nav></app-nav>
+
+<main>
+  <!-- Investment Section -->
+  <section class="text-center mt-5">
+    <div class="card shadow bg-body-tertiary">
+      <div class="card-body py-5 px-md-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10 col-sm-12">
+            <h3 class="fw-bold mb-3">Investment Here</h3>
+
+            <!-- Investment Form (Reactive Form) -->
+            <form [formGroup]="investForm">
+
+              <!-- Row 1: Date and Asset Type -->
+              <div class="row">
+                <!-- Date Field -->
+                <div class="col-12 col-md-6 mb-4">
+                  <label for="date" class="form-label labelStyle">Date</label>
+                  <input
+                    id="date"
+                    type="date"
+                    class="form-control inputStyle"
+                    placeholder="Enter Date"
+                    formControlName="date"
+                  />
+                  <!-- Validation: Date Required -->
+                  <div
+                    *ngIf="investForm.controls['date'].hasError('required') && investForm.controls['date'].touched"
+                    class="err"
+                  >
+                    Date is Mandatory
+                  </div>
+                </div>
+
+                <!-- Asset Type Dropdown -->
+                <div class="col-12 col-md-6 mb-4">
+                  <label for="asset" class="form-label labelStyle">Asset Type</label>
+                  <select
+                    id="asset"
+                    class="form-control inputStyle"
+                    formControlName="Asset"
+                  >
+                    <option value="" disabled selected>Select type of Asset</option>
+                    <option value="Stocks">Stocks</option>
+                    <option value="Bonds">Bonds</option>
+                    <option value="Real">Real Estate</option>
+                    <option value="Cash">Cash</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Row 2: Quantity and Description -->
+              <div class="row">
+                <!-- Quantity Input -->
+                <div class="col-12 col-md-6 mb-4">
+                  <label for="quantity" class="form-label labelStyle">Quantity</label>
+                  <input
+                    id="quantity"
+                    type="text"
+                    class="form-control inputStyle"
+                    placeholder="Enter Quantity"
+                    formControlName="Quantity"
+                  />
+                  <!-- Validation: Quantity Required -->
+                  <div
+                    *ngIf="investForm.controls['Quantity'].hasError('required') && investForm.controls['Quantity'].touched"
+                    class="err"
+                  >
+                    Quantity is Mandatory
+                  </div>
+                </div>
+
+                <!-- Description Textarea -->
+                <div class="col-12 col-md-6 mb-4">
+                  <label for="description" class="form-label labelStyle">Description</label>
+                  <textarea
+                    id="description"
+                    class="form-control inputStyle"
+                    rows="1"
+                    placeholder="Enter Description"
+                    formControlName="text"
+                  ></textarea>
+                  <!-- Validation: Description Required -->
+                  <div
+                    *ngIf="investForm.controls['text'].hasError('required') && investForm.controls['text'].touched"
+                    class="err"
+                  >
+                    Description is Mandatory
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 3: Investor and Price -->
+              <div class="row">
+                <!-- Investor Dropdown -->
+                <div class="col-12 col-md-6 mb-4">
+                  <label for="investor" class="form-label labelStyle">Investor</label>
+                  <select
+                    id="investor"
+                    class="form-control inputStyle"
+                    formControlName="Investor"
+                  >
+                    <option value="" disabled selected>Select Investor</option>
+                    <option value="Apple">Apple</option>
+                    <option value="cash holdings">Cash Holdings</option>
+                    <option value="property trust">Property Trust</option>
+                    <option value="bank savings">Bank Savings</option>
+                    <option value="Google">Google</option>
+                    <option value="estateco">EstateCo</option>
+                    <option value="bondco">BondCo</option>
+                  </select>
+                </div>
+
+                <!-- Price Input -->
+                <div class="col-12 col-md-6 mb-4">
+                  <label for="price" class="form-label labelStyle">Price</label>
+                  <input
+                    id="price"
+                    type="number"
+                    class="form-control inputStyle"
+                    placeholder="Enter Price"
+                    formControlName="price"
+                  />
+                  <!-- Validation: Price Required -->
+                  <div
+                    *ngIf="investForm.controls['price'].hasError('required') && investForm.controls['price'].touched"
+                    class="err"
+                  >
+                    Price is Mandatory
+                  </div>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                class="btn btn-secondary mb-4"
+                (click)="investSubmit()"
+              >
+                Submit
+              </button>
+            </form>
+            <!-- End Form -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

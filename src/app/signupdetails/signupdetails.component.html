@@ -1,0 +1,172 @@
+<section class="text-center">
+  <!-- Banner -->
+  <div class="p-5 bg-image BannerImage"></div>
+  <div class="heading">S'Track</div>
+
+  <!-- Sign up card -->
+  <div class="card mx-3 mx-md-5 shadow-5-strong bg-body-tertiary cardStyle">
+    <div class="card-body py-5 px-md-5 cardBodyStyle">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-5">Sign up</h2>
+
+          <!-- Sign up form -->
+          <form [formGroup]="signupForm">
+            <!-- First & Last Name -->
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <label class="form-label labelStyle">First name</label>
+                  <input type="text" class="form-control inputStyle" placeholder="Enter First Name" formControlName="firstname" />
+                  <div *ngIf="signupForm.controls['firstname'].hasError('required') && signupForm.controls['firstname'].touched"
+                   class="err">
+                    First Name is Mandatory
+                  </div>
+                  <div *ngIf="signupForm.controls['firstname'].hasError('minlength') && signupForm.controls['firstname'].touched" 
+                  class="err">
+                    Minimum 5 Characters Required
+                  </div>
+                  <div *ngIf="signupForm.controls['firstname'].hasError('maxlength') && signupForm.controls['firstname'].touched"
+                   class="err">
+                    Maximum 30 Characters Allowed
+                  </div>
+                  <div *ngIf="signupForm.controls['firstname'].hasError('pattern') && signupForm.controls['firstname'].touched" 
+                  class="err">
+                    Invalid First Name
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <label class="form-label labelStyle">Last name</label>
+                  <input type="text" class="form-control inputStyle" placeholder="Enter Last Name" formControlName="lastname" />
+                  <div *ngIf="signupForm.controls['lastname'].hasError('required') && signupForm.controls['lastname'].touched" class="err">
+                    Last Name is Mandatory
+                  </div>
+                  <div *ngIf="signupForm.controls['lastname'].hasError('minlength') && signupForm.controls['lastname'].touched" class="err">
+                    Minimum 5 Characters Required
+                  </div>
+                  <div *ngIf="signupForm.controls['lastname'].hasError('pattern') && signupForm.controls['lastname'].touched" class="err">
+                    Invalid Last Name
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email & Phone -->
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <label class="form-label labelStyle">Email</label>
+                  <input type="text" class="form-control inputStyle" placeholder="Enter Email Address" formControlName="email" (keyup)="checkEmail()" />
+                  <div *ngIf="signupForm.controls['email'].hasError('required') && signupForm.controls['email'].touched" class="err">
+                    Email is Mandatory
+                  </div>
+                  <div *ngIf="signupForm.controls['email'].hasError('pattern') && signupForm.controls['email'].touched" class="err">
+                    Invalid Email
+                  </div>
+                  <div *ngIf="emailcheck" class="err">Already registered Email</div>
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <label class="form-label labelStyle">Phone</label>
+                  <input type="number" class="form-control inputStyle" placeholder="Enter Phone Number" formControlName="contact" />
+                  <div *ngIf="signupForm.controls['contact'].hasError('required') && signupForm.controls['contact'].touched" class="err">
+                    Contact Number is Mandatory
+                  </div>
+                  <div *ngIf="signupForm.controls['contact'].hasError('pattern') && signupForm.controls['contact'].touched" class="err">
+                    Invalid Contact Number
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Password & Confirm Password -->
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <label class="form-label labelStyle">Password</label>
+                  <input type="password" class="form-control inputStyle" placeholder="Enter Password" formControlName="password" />
+                  <div *ngIf="signupForm.controls['password'].hasError('required') && signupForm.controls['password'].touched" class="err">
+                    Password is Mandatory
+                  </div>
+                  <div *ngIf="signupForm.controls['password'].hasError('minlength') && signupForm.controls['password'].touched" class="err">
+                    Minimum 3 Characters Required
+                  </div>
+                  <div *ngIf="signupForm.controls['password'].hasError('maxlength') && signupForm.controls['password'].touched" class="err">
+                    Maximum 8 Characters Allowed
+                  </div>
+                  <div *ngIf="signupForm.controls['password'].hasError('pattern') && signupForm.controls['password'].touched" class="err">
+                    Invalid Password
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <label class="form-label labelStyle">ReType Password</label>
+                  <input type="password" class="form-control inputStyle" placeholder="Enter Confirm Password" 
+                  formControlName="conpassword" (keyup)="checkPassword()" />
+                  <div *ngIf="signupForm.controls['conpassword'].hasError('required') && signupForm.controls['conpassword'].touched" 
+                  class="err">
+                    Confirm Password is Mandatory
+                  </div>
+                  <div *ngIf="passcon" class="err">Password Does Not Match</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Address, Account Number, CVV -->
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <label class="form-label labelStyle">Address</label>
+                  <textarea class="form-control inputStyle" placeholder="Enter Address" formControlName="address" rows="1"></textarea>
+                  <div *ngIf="signupForm.controls['address'].hasError('required') && signupForm.controls['address'].touched" class="err">
+                    Address is Mandatory
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-4">
+                <div class="form-outline">
+                  <label class="form-label labelStyle">Account Number</label>
+                  <input type="text" class="form-control inputStyle" placeholder="Enter Account No" formControlName="cardNo" 
+                  (blur)="checkAccno()" maxlength="12" />
+                  <div *ngIf="signupForm.controls['cardNo'].hasError('required') && signupForm.controls['cardNo'].touched" class="err">
+                    Account Number is Mandatory
+                  </div>
+                  <div *ngIf="signupForm.controls['cardNo'].hasError('maxlength') && signupForm.controls['cardNo'].touched" class="err">
+                    Maximum 12 Characters Allowed
+                  </div>
+                  <div *ngIf="accNoCheck" class="err">Wrong Card Number</div>
+                </div>
+              </div>
+
+              <div class="col-md-2 mb-4">
+                <div class="form-outline">
+                  <label class="form-label labelStyle">CVV</label>
+                  <input type="text" class="form-control inputStyle" placeholder="Enter CVV" formControlName="Cvv"  maxlength="3" />
+                  <div *ngIf="signupForm.controls['Cvv'].hasError('required') && signupForm.controls['Cvv'].touched" class="err">
+                    CVV is Mandatory
+                  </div>
+                  <div *ngIf="signupForm.controls['Cvv'].hasError('maxlength') && signupForm.controls['Cvv'].touched" class="err">
+                    Must be 3 Digits
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sign up button -->
+            <button type="submit" class="btn BtnStyle btn-block mt-4" [disabled]="emailcheck || passcon" (click)="register()">
+              Sign up
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

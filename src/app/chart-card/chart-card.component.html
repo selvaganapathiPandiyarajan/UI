@@ -1,0 +1,94 @@
+<div class="chart-container row">
+
+  <!-- BAR CHART SECTION -->
+  <div class="col-xl-6 col-md-12 mb-3">
+    <div class="card shadow-sm rounded">
+      <div class="card-body p-2">
+
+        <!-- Header: Tabs + Dropdown -->
+        <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap">
+       <div class="btn-group mb-2">
+  <button class="btn btn-outline-primary btn-sm" [ngClass]="{'active': selectedAsset === 'Stock'}" (click)="filterBar('Stock')">Stock</button>
+  <button class="btn btn-outline-primary btn-sm" [ngClass]="{'active': selectedAsset === 'Bonds'}" (click)="filterBar('Bonds')">Bonds</button>
+  <button class="btn btn-outline-primary btn-sm" [ngClass]="{'active': selectedAsset === 'Real Estate'}" (click)="filterBar('Real Estate')">Real Estate</button>
+  <button class="btn btn-outline-primary btn-sm" [ngClass]="{'active': selectedAsset === 'Cash'}" (click)="filterBar('Cash')">Cash</button>
+</div>
+
+
+          <div class="dropdown mb-2">
+            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  {{ selectedYearVal }}
+            </button>
+            <ul class="dropdown-menu">
+              <li *ngFor="let opt of barOptions">
+                <a class="dropdown-item"  (click)="onBarDropdownSelect(opt)">{{ opt }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bar Chart -->
+        <div class="chart-wrapper">
+          <canvas baseChart
+            [data]="barChartData"
+            [options]="barChartOptions"
+            [type]="'bar'">
+          </canvas>
+        </div>
+
+        <!-- Title -->
+        <div class="text-center mt-2">
+          <h6 class="text-muted">Asset Details</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LINE CHART SECTION -->
+  <div class="col-xl-6 col-md-12 mb-3">
+    <div class="card shadow-sm rounded">
+      <div class="card-body p-2">
+
+        <!-- Header: Two Dropdowns -->
+        <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap">
+          <div class="dropdown mb-2">
+            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            {{assetVal}}
+            </button>
+            <ul class="dropdown-menu">
+              <li *ngFor="let category of assetCategories">
+                <a class="dropdown-item" (click)="selectAssetCategory(category)">{{ category }}</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dropdown mb-2">
+            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              {{companyName}}
+            </button>
+            <ul class="dropdown-menu">
+              <li *ngFor="let company of companies">
+                <a class="dropdown-item" (click)="selectCompany(company)">{{ company }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Line Chart -->
+        <div class="chart-wrapper">
+          <canvas baseChart
+            [data]="lineChartData"
+            [options]="lineChartOptions"
+            [type]="'line'">
+          </canvas>
+        </div>
+
+        <!-- Title -->
+        <div class="text-center mt-2">
+          <h6 class="text-muted">Performance Details</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

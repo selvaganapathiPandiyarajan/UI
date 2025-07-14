@@ -1,0 +1,42 @@
+<header>
+  <!-- Sidebar -->
+  <nav id="sidebarMenu" class="collapse d-lg-block sidebar">
+    <div class="position-sticky sidebar-sticky">
+      <div class="list-group list-group-flush mx-1">
+        <a class="list-group-item sideList"  (click)="onDashboardClick()">
+          <i class="bx bxs-dashboard SideNav_icon"></i>
+          <span>Dashboard</span>
+        </a>
+        <a class="list-group-item sideList" (click)="onResetClick()">
+          <i class="bx bx-door-open SideNav_icon"></i>
+          <span>Reset Password</span>
+        </a>
+        <a class="list-group-item sideList" (click)="onLogoutClick()">
+          <i class="bx bxs-exit SideNav_icon"></i>
+          <span>Log out</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top navStyle">
+    <div class="container-fluid">
+      <!-- Sidebar Toggle -->
+      <button class="navbar-toggler" type="button" (click)="toggleSidebar()">
+        <i class='bx bx-menu' style="font-size: 24px;"></i>
+      </button>
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <p class="logoStyle">S'Track</p>
+      </a>
+
+      <!-- Search and user - desktop only -->
+      <div class="d-none d-lg-flex align-items-center ms-auto desktop-only">
+        <p class="mb-0 fw-bold mx-2">{{userDetailsvalue.firstname}}</p>
+        <i class='bx bx-user-circle SideNav_icon' style="font-size: 28px;"></i>
+      </div>
+    </div>
+  </nav>
+</header>

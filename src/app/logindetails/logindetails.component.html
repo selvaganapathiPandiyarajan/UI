@@ -1,0 +1,100 @@
+<section class="background-radial-gradient overflow-hidden">
+
+  <!-- Container for main login layout -->
+  <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+    <div class="row gx-lg-5 align-items-center mb-5">
+
+      <!-- Left side branding and description -->
+      <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+        <h1 class="my-5 display-5 fw-bold ls-tight logoStyle">
+          S'Track<br />
+          <span style="color:hsl(218, 94%, 32%); font-size: 40px">"Let make Financial change"</span>
+        </h1>
+        <h6 class="mb-4 opacity-70" style="color: #fff; font-size: 18px; line-height: 1.8">
+          S'Track Solutions is a cutting-edge fintech company dedicated to empowering individuals and institutions to manage their financial portfolios efficiently.
+        </h6>
+      </div>
+
+      <!-- Right side: Login Card -->
+      <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+        <div class="card bg-glass">
+          <div class="card-body px-4 py-5 px-md-5">
+
+            <!-- Login Form (Reactive Form) -->
+            <form [formGroup]="loginForm">
+
+              <!-- Email Input -->
+              <div class="form-outline mb-4">
+                <label for="form3Example3" class="form-label fw-bold" style="font-size: 17px">Email address</label>
+                <input type="email" id="form3Example3" formControlName="email" class="form-control inputStyle" placeholder="Enter Email Address" />
+                
+                <!-- Email Validation Errors -->
+                <div *ngIf="loginForm.controls['email'].hasError('required') && loginForm.controls['email'].touched" class="alert-danger err">
+                  Email is required
+                </div>
+                <div *ngIf="loginForm.controls['email'].hasError('pattern') && loginForm.controls['email'].touched" class="alert-danger err">
+                  Invalid Email Format
+                </div>
+              </div>
+
+              <!-- Password Input -->
+              <div class="form-outline mb-4">
+                <label for="form3Example4" class="form-label fw-bold" style="font-size: 17px">Password</label>
+                <input type="password" id="form3Example4" formControlName="password" class="form-control inputStyle" placeholder="Enter Password" />
+                
+                <!-- Password Validation Errors -->
+                <div *ngIf="loginForm.controls['password'].hasError('required') && loginForm.controls['password'].touched" class="alert-danger err">
+                  Password is required
+                </div>
+                <div *ngIf="loginForm.controls['password'].hasError('pattern') && loginForm.controls['password'].touched" class="alert-danger err">
+                  Invalid Password Format
+                </div>
+              </div>
+
+              <!-- Forget Password Link -->
+              <div class="form-check d-flex justify-content-start mb-4">
+                <label class="form-check-label fw-bolder" style="margin-left: -14px;" for="form2Example33">
+                  Click here for <a href="/forget">Forget password</a>
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="d-flex justify-content-center">
+                <button type="submit" class="btn-block mb-4 BtnStyle" [disabled]="loginForm.invalid" (click)="login()">
+                  Login
+                </button>
+              </div>
+
+              <!-- Social Auth Options -->
+              <div class="text-center">
+                <p class="fw-bold">or <a href="/signup">sign up</a></p>
+
+                <button type="button" class="btn btn-link mx-1">
+                  <i class='bx bxl-facebook iconStyle'></i>
+                </button>
+
+                <button type="button" class="btn btn-link mx-1">
+                  <i class='bx bxl-google iconStyle googleIcon'></i>
+                </button>
+
+                <button type="button" class="btn btn-link mx-1">
+                  <i class='bx bxl-twitter iconStyle'></i>
+                </button>
+
+                <button type="button" class="btn btn-link mx-1">
+                  <i class='bx bxl-github iconStyle gitIcon'></i>
+                </button>
+              </div>
+
+            </form>
+            <!-- End of Login Form -->
+
+          </div>
+        </div>
+      </div>
+      <!-- End of Right Side -->
+
+    </div>
+  </div>
+
+</section>

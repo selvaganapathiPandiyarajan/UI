@@ -1,0 +1,80 @@
+canvas {
+  max-width: 100% !important;
+  height: auto !important;
+}
+.btn-primary {
+    font-size: 12px;
+    padding: 8px 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+    background:linear-gradient(135deg, #7c3aed, #50259b) !important;
+    box-shadow: none;
+    border-radius: 50px;
+}
+.btn-outline-primary.active {
+  background-color: #7c3aed !important;
+  color: white !important;
+  border-radius: 5px;
+}
+.btn-primary:hover {
+    background:linear-gradient(135deg, #50259b, #7c3aed) !important;
+}
+
+.btn-outline-primary {
+    border:1px solid #7c3aed !important;
+    padding: 6px 20px;
+    border-radius: 5px !important;
+    color: #7c3aed !important;
+    font-size: 12px;
+    box-shadow: none;
+    text-transform:capitalize;
+}
+.btn-outline-primary:hover {
+    background: #7c3aed !important;
+    color: #fff !important;
+}
+.btn-group .btn-outline-primary.active {
+  background-color: #7c3aed !important;
+  color: white !important;
+}
+
+.btn-secondary {
+    font-size: 12px;
+    padding: 8px 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+    background:linear-gradient(135deg, #8955a9, #9240b1) !important;
+    box-shadow: none;
+    border-radius: 50px;
+}
+
+
+.btn-secondary:hover {
+    background:linear-gradient(135deg, #9240b1, #8955a9) !important;
+}
+
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    border: 1px solid #b3b3b3;
+} 
+.chart-wrapper {
+  height: 250px;
+  width: 95%;
+  margin: auto;
+}
+
+canvas {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.card-body {
+  padding: 0.75rem !important;
+}
+
+h6 {
+  font-size: 18px;
+  margin: 0;
+}

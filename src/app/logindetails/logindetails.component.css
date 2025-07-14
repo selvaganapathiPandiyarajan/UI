@@ -1,0 +1,82 @@
+/* === Background Gradient === */
+.background-radial-gradient {
+  background-color: #9687FA;
+  height: 100vh;
+  background-image:
+    radial-gradient(
+      650px circle at 0% 0%,
+      hsl(250, 80%, 90%) 15%,   /* very light purple */
+      hsl(250, 80%, 80%) 35%,   /* light lavender */
+      hsl(250, 71%, 74%) 75%,   /* light-medium purple */
+      hsl(250, 87%, 73%) 80%,   /* medium purple */
+      transparent 100%
+    ),
+    radial-gradient(
+      1250px circle at 100% 100%,
+      hsl(250, 80%, 95%) 15%,   /* almost white lavender */
+      hsl(250, 80%, 85%) 35%,   /* very light lavender */
+      hsl(250, 80%, 75%) 75%,   /* light purple */
+      hsl(250, 75%, 76%) 80%,   /* slightly deeper purple */
+      transparent 100%
+    );
+}
+
+/* === Glass Effect Card === */
+.bg-glass {
+  background-color: hsla(0, 0%, 100%, 0.9) !important;
+  backdrop-filter: saturate(200%) blur(25px);
+  border: 5px solid #ad1fff !important;
+  border-radius: 20px;
+}
+
+/* === Logo Style === */
+.logoStyle {
+  color: white;
+}
+
+/* === Input Field === */
+.inputStyle {
+  border: 2px solid #ad1fff !important;
+}
+
+/* === Button Style === */
+.BtnStyle {
+  background-color: #ad1fff;
+  border: 3px solid #ad1fff !important;
+  height: 40px;
+  width: 150px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+/* === Icons === */
+.iconStyle {
+  font-size: 30px;
+}
+
+.googleIcon {
+  background: conic-gradient(
+    from -45deg,
+    #ea4335 110deg,
+    #4285f4 90deg 180deg,
+    #34a853 180deg 270deg,
+    #fbbc05 270deg
+  ) 73% 55% / 150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.gitIcon {
+  color: black;
+}
+
+/* === Error Text === */
+.err {
+  color: red;
+  font-weight: bold;
+  margin-top: 5px;
+}

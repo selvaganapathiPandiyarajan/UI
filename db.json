@@ -1,0 +1,703 @@
+{
+  "userDetails": [
+    {
+      "id": "1"
+    },
+    {
+      "id": "49c1",
+      "firstname": "",
+      "lastname": "",
+      "email": "",
+      "password": "",
+      "conpassword": "",
+      "address": "",
+      "contact": "",
+      "cardNo": "123456789012",
+      "Cvv": "123",
+      "Amount": "5000",
+      "ExDate": "25/07",
+      "otp": 176218
+    },
+    {
+      "id": "d4bf",
+      "firstname": "selva",
+      "lastname": "ganapathi",
+      "email": "selva@gmail.com",
+      "password": "selva",
+      "conpassword": "selva",
+      "address": "Madurai",
+      "contact": 8190086456,
+      "cardNo": "432145678958",
+      "Cvv": "487",
+      "Amount": "5000",
+      "ExDate": "25/07",
+      "otp": 863996
+    }
+  ],
+  "AccountDetails": [
+    {
+      "firstname": "selva",
+      "lastname": "ganapathi",
+      "email": "selva@gmail.com",
+      "contact": 8190086456,
+      "CardNO": "432145678958",
+      "Cvv": "487",
+      "Amount": "5000",
+      "ExDate": "25/07",
+      "Branch": "Madurai",
+      "IFSC": "IOB45257",
+      "id": "1"
+    },
+    {
+      "firstname": "Indhu",
+      "lastname": "Rani",
+      "email": "indhu@gmail.com",
+      "contact": 9087388056,
+      "CardNO": "425736584587",
+      "Cvv": "302",
+      "Amount": "3000",
+      "ExDate": "25/08",
+      "Branch": "Chennai",
+      "IFSC": "SBI02754",
+      "id": "2"
+    },
+    {
+      "firstname": "Madhu",
+      "lastname": "kavi",
+      "email": "madhu@gmail.com",
+      "contact": 8754856874,
+      "CardNO": "65869874212",
+      "Cvv": "405",
+      "Amount": "4000",
+      "ExDate": "25/08",
+      "Branch": "Theni",
+      "IFSC": "IOB45257",
+      "id": "4"
+    }
+  ],
+  "chartdata": [
+    {
+      "category": "Stock",
+      "company": "apple",
+      "year": 2024,
+      "data": [
+        {
+          "label": "Jan",
+          "value": 100
+        },
+        {
+          "label": "Feb",
+          "value": 120
+        },
+        {
+          "label": "Mar",
+          "value": 90
+        },
+        {
+          "label": "Apr",
+          "value": 140
+        },
+        {
+          "label": "May",
+          "value": 100
+        },
+        {
+          "label": "Jun",
+          "value": 70
+        },
+        {
+          "label": "Jul",
+          "value": 80
+        }
+      ],
+      "id": "7e92"
+    },
+    {
+      "category": "Stock",
+      "company": "apple",
+      "year": 2025,
+      "data": [
+        {
+          "label": "Jan",
+          "value": 110
+        },
+        {
+          "label": "Feb",
+          "value": 130
+        },
+        {
+          "label": "Mar",
+          "value": 95
+        },
+        {
+          "label": "Apr",
+          "value": 150
+        },
+        {
+          "label": "May",
+          "value": 110
+        },
+        {
+          "label": "Jun",
+          "value": 75
+        },
+        {
+          "label": "Jul",
+          "value": 85
+        }
+      ],
+      "id": "f99a"
+    },
+    {
+      "category": "Bonds",
+      "company": "google",
+      "year": 2024,
+      "data": [
+        {
+          "label": "Jan",
+          "value": 90
+        },
+        {
+          "label": "Feb",
+          "value": 140
+        },
+        {
+          "label": "Mar",
+          "value": 100
+        },
+        {
+          "label": "Apr",
+          "value": 70
+        },
+        {
+          "label": "May",
+          "value": 80
+        },
+        {
+          "label": "Jun",
+          "value": 120
+        },
+        {
+          "label": "Jul",
+          "value": 100
+        }
+      ],
+      "id": "13b2"
+    },
+    {
+      "category": "Bonds",
+      "company": "google",
+      "year": 2025,
+      "data": [
+        {
+          "label": "Jan",
+          "value": 95
+        },
+        {
+          "label": "Feb",
+          "value": 145
+        },
+        {
+          "label": "Mar",
+          "value": 105
+        },
+        {
+          "label": "Apr",
+          "value": 75
+        },
+        {
+          "label": "May",
+          "value": 85
+        },
+        {
+          "label": "Jun",
+          "value": 125
+        },
+        {
+          "label": "Jul",
+          "value": 105
+        }
+      ],
+      "id": "f689"
+    },
+    {
+      "category": "Bonds",
+      "company": "bondco",
+      "year": 2024,
+      "data": [
+        {
+          "label": "Jan",
+          "value": 60
+        },
+        {
+          "label": "Feb",
+          "value": 65
+        },
+        {
+          "label": "Mar",
+          "value": 90
+        },
+        {
+          "label": "Apr",
+          "value": 140
+        },
+        {
+          "label": "May",
+          "value": 100
+        },
+        {
+          "label": "Jun",
+          "value": 70
+        },
+        {
+          "label": "Jul",
+          "value": 80
+        }
+      ],
+      "id": "6b21"
+    },
+    {
+      "category": "Bonds",
+      "company": "bondco",
+      "year": 2025,
+      "data": [
+        {
+          "label": "Jan",
+          "value": 65
+        },
+        {
+          "label": "Feb",
+          "value": 70
+        },
+        {
+          "label": "Mar",
+          "value": 95
+        },
+        {
+          "label": "Apr",
+          "value": 145
+        },
+        {
+          "label": "May",
+          "value": 105
+        },
+        {
+          "label": "Jun",
+          "value": 75
+        },
+        {
+          "label": "Jul",
+          "value": 85
+        }
+      ],
+      "id": "de9a"
+    },
+    {
+      "category": "Cash",
+      "company": "cash holdings",
+      "year": 2024,
+      "data": [
+        {
+          "label": "Jan",
+          "value": 50
+        },
+        {
+          "label": "Feb",
+          "value": 55
+        },
+        {
+          "label": "Mar",
+          "value": 60
+        },
+        {
+          "label": "Apr",
+          "value": 65
+        },
+        {
+          "label": "May",
+          "value": 70
+        },
+        {
+          "label": "Jun",
+          "value": 75
+        },
+        {
+          "label": "Jul",
+          "value": 80
+        }
+      ],
+      "id": "09b3"
+    },
+    {
+      "category": "Cash",
+      "company": "cash holdings",
+      "year": 2025,
+      "data": [
+        {
+          "label": "Jan",
+          "value": 52
+        },
+        {
+          "label": "Feb",
+          "value": 57
+        },
+        {
+          "label": "Mar",
+          "value": 62
+        },
+        {
+          "label": "Apr",
+          "value": 67
+        },
+        {
+          "label": "May",
+          "value": 72
+        },
+        {
+          "label": "Jun",
+          "value": 77
+        },
+        {
+          "label": "Jul",
+          "value": 82
+        }
+      ],
+      "id": "74fc"
+    },
+    {
+      "category": "Cash",
+      "company": "bank savings",
+      "year": 2024,
+      "data": [
+        {
+          "label": "Jan",
+          "value": 80
+        },
+        {
+          "label": "Feb",
+          "value": 85
+        },
+        {
+          "label": "Mar",
+          "value": 90
+        },
+        {
+          "label": "Apr",
+          "value": 95
+        },
+        {
+          "label": "May",
+          "value": 100
+        },
+        {
+          "label": "Jun",
+          "value": 105
+        },
+        {
+          "label": "Jul",
+          "value": 110
+        }
+      ],
+      "id": "7b60"
+    },
+    {
+      "category": "Cash",
+      "company": "bank savings",
+      "year": 2025,
+      "data": [
+        {
+          "label": "Jan",
+          "value": 82
+        },
+        {
+          "label": "Feb",
+          "value": 87
+        },
+        {
+          "label": "Mar",
+          "value": 92
+        },
+        {
+          "label": "Apr",
+          "value": 97
+        },
+        {
+          "label": "May",
+          "value": 102
+        },
+        {
+          "label": "Jun",
+          "value": 107
+        },
+        {
+          "label": "Jul",
+          "value": 112
+        }
+      ],
+      "id": "e66e"
+    },
+    {
+      "category": "Real Estate",
+      "company": "estateco",
+      "year": 2024,
+      "data": [
+        {
+          "label": "Jan",
+          "value": 300
+        },
+        {
+          "label": "Feb",
+          "value": 310
+        },
+        {
+          "label": "Mar",
+          "value": 320
+        },
+        {
+          "label": "Apr",
+          "value": 330
+        },
+        {
+          "label": "May",
+          "value": 340
+        },
+        {
+          "label": "Jun",
+          "value": 350
+        },
+        {
+          "label": "Jul",
+          "value": 360
+        }
+      ],
+      "id": "40a4"
+    },
+    {
+      "category": "Real Estate",
+      "company": "estateco",
+      "year": 2025,
+      "data": [
+        {
+          "label": "Jan",
+          "value": 305
+        },
+        {
+          "label": "Feb",
+          "value": 315
+        },
+        {
+          "label": "Mar",
+          "value": 325
+        },
+        {
+          "label": "Apr",
+          "value": 335
+        },
+        {
+          "label": "May",
+          "value": 345
+        },
+        {
+          "label": "Jun",
+          "value": 355
+        },
+        {
+          "label": "Jul",
+          "value": 365
+        }
+      ],
+      "id": "d4b6"
+    },
+    {
+      "category": "Real Estate",
+      "company": "property trust",
+      "year": 2024,
+      "data": [
+        {
+          "label": "Jan",
+          "value": 400
+        },
+        {
+          "label": "Feb",
+          "value": 410
+        },
+        {
+          "label": "Mar",
+          "value": 420
+        },
+        {
+          "label": "Apr",
+          "value": 430
+        },
+        {
+          "label": "May",
+          "value": 440
+        },
+        {
+          "label": "Jun",
+          "value": 450
+        },
+        {
+          "label": "Jul",
+          "value": 460
+        }
+      ],
+      "id": "2fd3"
+    },
+    {
+      "category": "Real Estate",
+      "company": "property trust",
+      "year": 2025,
+      "data": [
+        {
+          "label": "Jan",
+          "value": 405
+        },
+        {
+          "label": "Feb",
+          "value": 415
+        },
+        {
+          "label": "Mar",
+          "value": 425
+        },
+        {
+          "label": "Apr",
+          "value": 435
+        },
+        {
+          "label": "May",
+          "value": 445
+        },
+        {
+          "label": "Jun",
+          "value": 455
+        },
+        {
+          "label": "Jul",
+          "value": 465
+        }
+      ],
+      "id": "bb98"
+    }
+  ],
+  "InvestDetails": [
+    {
+      "id": "13f9",
+      "firstname": "selva",
+      "lastname": "ganapathi",
+      "email": "selva@gmail.com",
+      "contact": 8190086456,
+      "date": "2025-07-13",
+      "Asset": "Stocks",
+      "Quantity": "2",
+      "text": "stock for apple",
+      "Inverstor": "google",
+      "price": 100
+    },
+    {
+      "id": "13f9",
+      "firstname": "selva",
+      "lastname": "ganapathi",
+      "email": "selva@gmail.com",
+      "contact": 8190086456,
+      "date": "2025-07-13",
+      "Asset": "Bonds",
+      "Quantity": "2",
+      "text": "bonds for google",
+      "Inverstor": "google",
+      "price": 50
+    },
+    {
+      "id": "13f9",
+      "firstname": "selva",
+      "lastname": "ganapathi",
+      "email": "selva@gmail.com",
+      "contact": 8190086456,
+      "date": "2025-07-13",
+      "Asset": "Bonds",
+      "Quantity": "2",
+      "text": "Bonds for apple",
+      "Inverstor": "apple",
+      "price": 20
+    },
+    {
+      "id": "13f8",
+      "firstname": "selva",
+      "lastname": "ganapathi",
+      "email": "selva@gmail.com",
+      "contact": 8190086456,
+      "date": "2025-07-12",
+      "Asset": "Stocks",
+      "Quantity": "2",
+      "text": "stock for apple",
+      "Inverstor": "Apple",
+      "price": 500
+    },
+    {
+      "id": "13f7",
+      "firstname": "selva",
+      "lastname": "ganapathi",
+      "email": "selva@gmail.com",
+      "contact": 8190086456,
+      "date": "2025-07-12",
+      "Asset": "Cash",
+      "Quantity": "2",
+      "text": "stock for apple",
+      "Inverstor": "Apple",
+      "price": 500
+    },
+    {
+      "id": "13f6",
+      "firstname": "selva",
+      "lastname": "ganapathi",
+      "email": "selva@gmail.com",
+      "contact": 8190086456,
+      "date": "2025-07-11",
+      "Asset": "Cash",
+      "Quantity": "2",
+      "text": "stock for apple",
+      "Inverstor": "bondco",
+      "price": 500
+    },
+    {
+      "id": "13f2",
+      "firstname": "selva",
+      "lastname": "ganapathi",
+      "email": "selva@gmail.com",
+      "contact": 8190086456,
+      "date": "2025-07-10",
+      "Asset": "Real Estate",
+      "Quantity": "1",
+      "text": "stock for apple",
+      "Inverstor": "estateco",
+      "price": 300
+    },
+    {
+      "id": "6746",
+      "firstname": "selva",
+      "lastname": "ganapathi",
+      "email": "selva@gmail.com",
+      "contact": 8190086456,
+      "date": "2025-07-12",
+      "Asset": "Real Estate",
+      "Quantity": "1",
+      "text": "Bonds for company",
+      "Inverstor": "bondco",
+      "price": 100
+    },
+    {
+      "id": "c385",
+      "firstname": "selva",
+      "lastname": "ganapathi",
+      "email": "selva@gmail.com",
+      "contact": 8190086456,
+      "date": "2025-07-14",
+      "Asset": "Bonds",
+      "Quantity": "2",
+      "text": "Bonds for July-14",
+      "Inverstor": "Apple",
+      "price": 200
+    }
+  ]
+}

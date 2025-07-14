@@ -1,0 +1,85 @@
+/* Sidebar styles */
+.sidebar {
+  background-color: #e2dcf1;
+  width: 240px;
+  height: 100vh;
+  padding-top: 16px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1040;
+  margin-top: 66px;
+  border-right: 1px solid #b39af0;
+}
+
+.sidebar-sticky {
+  overflow-y: auto;
+}
+
+.sideList {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6c757d;
+  padding: 12px 20px;
+  border-bottom: 1px solid #b39af0;
+  transition: background-color 0.2s ease;
+  background-color: #e2dcf1;
+}
+
+.sideList:hover {
+  background-color: #e9ecef;
+  color: #343a40;
+  text-decoration: none;
+}
+
+.SideNav_icon {
+  font-size: 20px;
+  margin-right: 12px;
+  color: #495057;
+}
+
+/* Top navbar style */
+.navStyle {
+  background-color: #e2dcf1;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border: 1px solid #b39af0;
+}
+
+/* Logo style */
+.logoStyle {
+  font-weight: bold;
+  color: #7c3aed;
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Input style */
+.inp {
+  border: none;
+  border-bottom: 3px solid #7c3aed;
+  outline: none;
+  padding: 4px 8px;
+  font-size: 14px;
+  width: 300px
+}
+
+/* Search and user container (hide on mobile) */
+.desktop-only {
+  display: flex;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding-top: 60px;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+}

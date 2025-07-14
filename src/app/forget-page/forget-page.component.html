@@ -1,0 +1,133 @@
+<section class="vh-100 bannerStyle">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100" >
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="/assets/man-with-laptop.png"
+            class="img-fluid" alt="forget-logo">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 cardStyle" *ngIf="section">
+            <h1 class="my-4 display-5 fw-bold ls-tight logoStyle">
+                S'Track</h1>
+                <h4 class="text-center mt-2">Reset Password here</h4>
+          <form [formGroup]="forgetform">
+            
+  
+  
+            <!-- Email input -->
+            <div class="form-outline mb-4 mt-4">
+                <label class="form-label fw-bold">Email address</label>
+              <input type="email" id="email" class="form-control inputStyle"
+                placeholder="Enter a valid email address" (keyup)="checkEmail()"  formControlName="email" autocomplete="off"/>
+                <div *ngIf = "forgetform.controls['email'].hasError('required') && forgetform.controls['email'].touched" class="err">
+                    Email Name is Mandatory
+                   </div>
+                   <div  *ngIf = "forgetform.controls['email'].hasError('pattern') && forgetform.controls['email'].touched"class="err">
+           Invalid Email
+                 </div>
+                 <div  *ngIf = "emailCheck"class="err">
+                  No user Found
+                        </div>
+            </div>
+  
+            <!-- Password input -->
+            <div class="form-outline mb-3">
+                <div class="form-group">
+                    <label class="form-label fw-bold">Sequrity text</label>
+                           <div class="input-group mb-3">
+                        <input type="text" class="form-control captchaStyle" formControlName="Captchatext" placeholder="Enter Shown the text"   id="textinput" (keyup)="validCaptcha()">
+                        <div class="input-group-append" >
+                          <span class="input-group-text captchaField"  id="captcha">{{this.captchaValue}}</span>
+                          
+                        </div>
+                        <div class="input-group-append">
+                            <button class="input-group-text referBtn"  (click)="createCaptcha()"><i class='bx bx-refresh' style="font-size:23px;"></i>
+                            </button>
+                          </div>
+                         
+                      </div>
+                      <div *ngIf = "forgetform.controls['Captchatext'].hasError('required') && forgetform.controls['Captchatext'].touched" class="err">
+                        Captcha is Mandatory
+                       </div>
+                                           
+                                            <div  *ngIf = "invalidCaptcha" class="err">
+                                            Invalid Captcha
+                                            </div>
+                                           
+                                          
+                </div>
+            </div>
+  
+  
+            <div class="text-center text-lg-center mt-4 d-flex justify-content-center">
+              <button  type="button"  class="btn btn-sm BtnStyle" [disabled]="emailCheck || forgetform.invalid ||  invalidCaptcha" (click)="getOTP()">GET OTP</button>
+            </div>
+  
+          </form>
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 cardStyle" *ngIf="sectionTwo">
+            <h1 class="my-4 display-5 fw-bold ls-tight logoStyle">
+                D'IT</h1>
+                <h4 class="text-center mt-2">OTP service</h4>
+          <form [formGroup]="otpform">
+            <div class="form-outline mb-4 mt-4">
+                <label class="form-label fw-bold">Enter OTP from Gmail Account</label>
+              <input type="text" id="otpval" class="form-control inputStyle" style="margin-top:20px"
+                placeholder="Enter a valid OTP" (keyup)="CheckOtp()" formControlName="otpval" autocomplete="off"/>
+                <div *ngIf = "otpform.controls['otpval'].hasError('required') && otpform.controls['otpval'].touched" class="err">
+                    OTP is Mandatory
+                   </div>
+                        
+             <div  *ngIf = "incorrectotp" class="err">
+                Incorrect OTP                                    
+                </div>
+            </div>
+  
+                    
+            <div class="text-center text-lg-center mt-4 d-flex justify-content-center">
+              <button  type="button" name="otp" id="otp"  class="btn btn-sm BtnStyle"  [disabled]="otpform.invalid || incorrectotp">Reset Now</button>
+            </div>
+        </form>
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 cardStyle" *ngIf="sectionThree">
+            <h1 class="my-4 display-5 fw-bold ls-tight logoStyle">
+                D'IT</h1>
+                <h4 class="text-center mt-2">Password reset service</h4>
+          <form [formGroup]="resetform">
+            <div class="form-outline mb-4 mt-4">
+                <label class="form-label fw-bold">Password</label>
+              <input type="password" id="password" class="form-control inputStyle" 
+                placeholder="Enter a Password" (keyup)="CheckOtp()" formControlName="password" autocomplete="off"/>
+                <div *ngIf = "resetform.controls['password'].hasError('required') && resetform.controls['password'].touched" class=" err">
+                    Password is Mandatory
+                           </div>
+                           <div   *ngIf = "resetform.controls['password'].hasError('minlength') && resetform.controls['password'].touched" class=" err">
+                               Minimum 3 Characters Reqired
+                           </div>
+                           <div  *ngIf = "resetform.controls['password'].hasError('maxlength') && resetform.controls['password'].touched"class=" err">
+                               Maximum 8 Characters are Allowed
+                           </div>
+                           <div  *ngIf = "resetform.controls['password'].hasError('pattern') && resetform.controls['password'].touched"class=" err">
+                   Invalid Password
+                         </div>
+            </div>
+            <div class="form-outline mb-3">
+                <label class="form-label fw-bold">Confirm Password</label>
+              <input type="password" id="conpassword" class="form-control inputStyle"
+                placeholder="Enter a Confirm Password" (keyup)="checkPassword()" formControlName="conpassword" autocomplete="off"/>
+                <div *ngIf = "resetform.controls['conpassword'].hasError('required') && resetform.controls['conpassword'].touched" class=" err">
+                    Confirm Password is Mandatory
+                           </div>
+                           <div *ngIf = "passCheck" class="err">
+  Password Doesnot Match
+                          </div>
+            </div>
+                    
+            <div class="text-center text-lg-center mt-4 d-flex justify-content-center">
+              <button  type="button" name="reset" id="reset"  class="btn btn-sm BtnStyle"  [disabled]="resetform.invalid" (click)="changepass()">Reset Now</button>
+            </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </section>
+

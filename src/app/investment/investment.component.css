@@ -1,0 +1,102 @@
+/* Dropdown Styling */
+.dropDown_Style {
+  width: 111px;
+  height: 32px;
+  font-size: 12px;
+  margin-top: 1px;
+  background-color: #d1a2ec;
+  border: 2px solid #ad1fff;
+  border-radius: 20px;
+}
+
+/* Card Styling */
+.card {
+  width: 85%;
+  margin-left: 30px;
+  margin-top: 81px;
+}
+
+/* Responsive Layouts */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .card {
+    margin-left: 60px;
+    margin-top: 130px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .card {
+    width: 80%;
+    margin-left: 101px;
+    margin-top: 130px;
+  }
+}
+
+@media (min-width: 991.98px) {
+  main {
+    padding-left: 240px;
+  }
+
+  .card {
+    margin-left: 101px;
+    margin-top: 138px;
+  }
+}
+
+/* Ticket View Container */
+.ticketView {
+  margin-top: 62px;
+  background-color: #f2f2f2;
+  height: 100vh !important;
+}
+
+/* Input Styling */
+.inputStyle {
+  border: 2px solid #ad1fff !important;
+}
+
+.inputformStyle {
+  background-color: #fbfbfb;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #ad1fff !important;
+}
+
+/* Label Styling */
+.labelStyle {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Divider Styling */
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 2;
+  height: 2px;
+  background: #7d07c1;
+  margin-top: 5px;
+}
+
+/* Button Styling */
+.btn-secondary {
+  font-size: 14px;
+  padding: 8px 22px;
+  font-weight: bold;
+  text-transform: capitalize;
+  background: linear-gradient(135deg, #8955a9, #9240b1) !important;
+  border-radius: 50px !important;
+  border: 2px solid #9240b1;
+  box-shadow: none;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #9240b1, #8955a9) !important;
+}
+
+/* === Error Text === */
+.err {
+  color: red;
+  font-weight: bold;
+  margin-top: 5px;
+}
